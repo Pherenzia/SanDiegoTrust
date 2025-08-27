@@ -27,6 +27,12 @@ A modern, responsive website for San Diego Trust, a study abroad services compan
 5. **Contact**: Contact form with validation and company information
 6. **Footer**: Social links and additional navigation
 
+### Multilingual Support
+- **English Version**: Primary language version (`index.html`)
+- **Japanese Version**: Complete Japanese translation (`index-ja.html`)
+- **Language Switcher**: Easy navigation between language versions
+- **SEO Optimized**: Proper meta tags and language attributes for both versions
+
 ## 📱 Mobile Responsiveness
 
 The website is fully optimized for mobile devices with:
@@ -50,7 +56,8 @@ The website is fully optimized for mobile devices with:
 ### File Structure
 ```
 sANdIEGOtRUST/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML file (English)
+├── index-ja.html       # Japanese version
 ├── styles.css          # CSS styles and responsive design
 ├── script.js           # JavaScript functionality
 └── README.md           # Project documentation

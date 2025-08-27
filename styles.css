@@ -83,6 +83,25 @@ body {
     width: 100%;
 }
 
+.language-switch {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.language-switch:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.language-switch::after {
+    display: none;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
