@@ -139,6 +139,36 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
+// Simple Hero Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (!slides || slides.length === 0) return;
+
+    let current = 0;
+    slides[current].classList.add('active');
+
+    const showSlide = (index) => {
+        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    };
+
+    let interval = setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 5000);
+
+    // Pause on hover over hero-image
+    const heroImage = document.querySelector('.hero-image');
+    if (heroImage) {
+        heroImage.addEventListener('mouseenter', () => clearInterval(interval));
+        heroImage.addEventListener('mouseleave', () => {
+            interval = setInterval(() => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }, 5000);
+        });
+    }
+});
+
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,

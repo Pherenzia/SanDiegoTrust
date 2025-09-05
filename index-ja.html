@@ -19,7 +19,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>サンディエゴトラスト</h2>
+                <h2>San Diego Trust</h2>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">ホーム</a>
@@ -39,6 +39,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-carousel" aria-hidden="true">
+            <img src="Assets/san-diego-bay.jpg" alt="San Diego Bay" class="carousel-slide">
+            <img src="Assets/sunset.jpg" alt="Sunset over San Diego" class="carousel-slide">
+            <img src="Assets/people-2557399_1280.jpg" alt="Students in San Diego" class="carousel-slide">
+            <img src="Assets/mission-bay-san-diego-california-united-states-paradisiac-beach-scenery-seascape-landmark-396192321.webp" alt="Mission Bay" class="carousel-slide">
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -54,13 +60,17 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-card">
-                    <div class="card-content">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>専門的なガイダンス</h3>
-                        <p>あなたの留学を支えるプロフェッショナルサポート</p>
+                <a href="#about" class="card-link" title="続きを読む">
+                    <div class="hero-card">
+                        <div class="card-content">
+                            <span class="cap-icon" aria-hidden="true">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            <h3>専門的なガイダンス</h3>
+                            <p>あなたの留学を支えるプロフェッショナルサポート</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -77,36 +87,48 @@
                     <div class="service-icon">
                         <i class="fas fa-university"></i>
                     </div>
-                    <h3>大学進学サポート</h3>
-                    <p>サンディエゴの最高の大学・カレッジへの進学と出願を専門的にサポートします。</p>
+                    <h3>住居探し</h3>
+                    <p>近年、サンディエゴでは家賃の高騰や貸主からの条件が厳しくなり、日本人の方が一人
+でアパートを借りるのはとても難しくなっています。
+地元のネットワークを活かして、あなたに合った住まい探しをしっかりサポートします</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>住居サポート</h3>
-                    <p>キャンパス近くの安全で快適な住居オプションを当社の住居サポートサービスで見つけましょう。</p>
+                    <h3>ビザサポート</h3>
+                    <p>手続きは英語でのやり取りや提出書類が多く、不安に感じる方も少なくありません。</p>
+                    <p>ビザ申請の流れをご案内し、必要書類の準備から申請手続きまで、安心して進められる
+ようしっかりサポートします。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-passport"></i>
                     </div>
-                    <h3>ビザサポート</h3>
-                    <p>ビザ申請、書類準備、移民要件に関する完全なサポートを提供します。</p>
+                    <h3>語学学校</h3>
+                    <p>日本でもよく知られている大手の語学学校から、現地だからこそ紹介できるリーズナブ
+ルでアットホームな学校まで、さまざまな選択肢があります。目的やご希望に合わせて
+最適な学校をご紹介し、入学までの手続きをしっかりサポートします。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3>語学サポート</h3>
-                    <p>英語準備と留学中の継続的な語学サポートを提供します。</p>
+                    <h3>サマーキャンプ</h3>
+                    <p>英語学習はもちろん、スポーツやアート、サイエンスなど、多彩なプログラムを体験で
+きるサマーキャンプがたくさんあります。
+お子様の興味や年齢に合わせて最適なキャンプを一緒にお探しし、申し込みから参加ま
+でをしっかりサポートします。初めての海外体験でも安心してご参加いただけるよう、
+現地ならではのきめ細やかなサポートをお届けします。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>文化適応サポート</h3>
-                    <p>アメリカ文化への適応と新しい友達作りを支援するプログラムとアクティビティを提供します。</p>
+                    <h3>相談・連絡</h3>
+                    <p>ご質問やご相談は、メールはもちろん、ZoomやLINEでのビデオ通話、電話でもいつでも
+対応しています。すぐに相談できる安心のサポート体制で、皆さんの不安や疑問を解消
+します</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -125,8 +147,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>サンディエゴトラストについて</h2>
-                    <p>文化の架け橋となり、機会を創造するという使命のもと設立されたサンディエゴトラストは、10年以上にわたり日本人学生がサンディエゴで学術的夢を実現するお手伝いをしてきました。</p>
-                    <p>経験豊富な専門家チームが、留学生が直面する特有の課題を理解し、一歩一歩パーソナライズされたサポートを提供します。</p>
+                    <p>「サンディエゴで学んでみたい！体験してみたい！サポートが欲しい！」
+                        そんな皆さまのご希望に合わせて、最適なプランをご提供いたします。
+                        私たちは、日本からの留学生や駐在員のご家族が安心してサンディエゴで生活できるよ
+                        う、学校選びから住まい探し、生活サポートまで幅広くお手伝いしています。長年の経
+                        験と地域ネットワークを活かし、一人ひとりに寄り添ったきめ細やかなサポートを行っ
+                        ております。</p>
                     <div class="stats">
                         <div class="stat">
                             <h3>500+</h3>
