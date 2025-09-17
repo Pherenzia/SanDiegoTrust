@@ -1,0 +1,4 @@
+body { font-family: Inter, sans-serif; padding: 2rem; }
+.app h1 { color: #2563eb; }
+.app ul { list-style: none; padding: 0; }
+.app li { margin: 1rem 0; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; }

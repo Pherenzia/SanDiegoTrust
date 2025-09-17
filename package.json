@@ -1,0 +1,14 @@
+{
+  "name": "sandiegotrust-monorepo",
+  "private": true,
+  "packageManager": "pnpm@8.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "pnpm --filter @sd/web dev",
+    "web:build": "pnpm --filter @sd/web build",
+    "web:preview": "pnpm --filter @sd/web preview"
+  }
+}
