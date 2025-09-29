@@ -66,6 +66,18 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .nav-logo h2 {
     color: #2563eb;
     font-weight: 700;
@@ -676,6 +688,15 @@ body {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+    .nav-logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.25rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -763,6 +784,15 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+
+    .nav-logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.1rem;
     }
 
     .hero-title {
