@@ -73,9 +73,12 @@ body {
 }
 
 .nav-logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
     object-fit: contain;
+    display: block;
 }
 
 .nav-logo h2 {
@@ -689,8 +692,10 @@ body {
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     .nav-logo-icon {
-        width: 28px;
-        height: 28px;
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
     }
     
     .nav-logo h2 {
@@ -787,8 +792,10 @@ body {
     }
 
     .nav-logo-icon {
-        width: 24px;
-        height: 24px;
+        width: 24px !important;
+        height: 24px !important;
+        max-width: 24px !important;
+        max-height: 24px !important;
     }
     
     .nav-logo h2 {
