@@ -42,10 +42,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact Form Handling
+// Contact Form Handling with Web3Forms
 const contactForm = document.getElementById('contactForm');
+const formResult = document.getElementById('formResult');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     
     // Get form data
@@ -54,32 +55,65 @@ contactForm.addEventListener('submit', function(e) {
     
     // Basic validation
     if (!data.name || !data.email || !data.service || !data.message) {
-        showNotification('Please fill in all required fields.', 'error');
+        showFormResult('Please fill in all required fields.', 'error');
         return;
     }
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
-        showNotification('Please enter a valid email address.', 'error');
+        showFormResult('Please enter a valid email address.', 'error');
         return;
     }
     
-    // Simulate form submission
+    // Add Web3Forms access key
+    formData.append("access_key", "7af09948-fae1-488c-b497-73f5008c23dc");
+    
+    // Update UI
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
+    showFormResult('Sending message...', 'sending');
     
-    // Simulate API call
-    setTimeout(() => {
-        showNotification('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-        this.reset();
+    try {
+        // Submit to Web3Forms
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            showFormResult('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+            this.reset();
+        } else {
+            console.log("Error", result);
+            showFormResult(result.message || 'An error occurred. Please try again.', 'error');
+        }
+    } catch (error) {
+        console.error("Form submission error:", error);
+        showFormResult('An error occurred. Please try again.', 'error');
+    } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
-    }, 2000);
+    }
 });
+
+// Function to show form result
+function showFormResult(message, type) {
+    formResult.textContent = message;
+    formResult.className = `form-result show ${type}`;
+    
+    // Auto-hide success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            formResult.classList.remove('show');
+        }, 5000);
+    }
+}
 
 // Notification system
 function showNotification(message, type = 'info') {
