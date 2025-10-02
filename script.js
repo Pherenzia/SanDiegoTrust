@@ -167,6 +167,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 5000);
         });
     }
+
+    // Trigger hero text animation on page load
+    setTimeout(() => {
+        const heroElements = document.querySelectorAll('.hero-content, .hero-title, .hero-subtitle, .hero-buttons, .hero-card');
+        heroElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+                
+                // Add floating animation to hero card after rise-up completes
+                if (element.classList.contains('hero-card')) {
+                    setTimeout(() => {
+                        element.classList.add('animation-complete');
+                    }, 1200); // Wait for rise-up animation to complete
+                }
+            }, index * 200);
+        });
+    }, 100);
 });
 
 // Intersection Observer for animations

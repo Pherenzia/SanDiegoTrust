@@ -837,6 +837,60 @@ body {
     }
 }
 
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-content {
+    animation: riseUp 1.2s ease-out;
+}
+
+.hero-title {
+    animation: riseUp 1.2s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+    animation: riseUp 1.2s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    animation: riseUp 1.2s ease-out 0.6s both;
+}
+
+.hero-card {
+    animation: riseUp 1.2s ease-out 0.8s both;
+}
+
+.hero-card.animation-complete {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Initial state for hero elements before animation */
+.hero-content,
+.hero-title,
+.hero-subtitle,
+.hero-buttons,
+.hero-card {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
 .service-card,
 .testimonial-card {
     animation: fadeInUp 0.6s ease-out;
