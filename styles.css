@@ -482,35 +482,30 @@ body {
 .image-container {
     width: 350px;
     height: auto;
-    background: white;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    /* No hover effect */
 }
 
 .about-logo {
     width: 100%;
-    max-width: 280px;
+    max-width: 350px;
     height: auto;
     object-fit: contain;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-container p {
-    color: #1f2937;
-    font-weight: 600;
-    font-size: 1.125rem;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 1rem;
     text-align: center;
     margin: 0;
 }
