@@ -570,16 +570,16 @@ body {
 }
 
 .author-info h4 {
-    font-weight: 600;
-    color: #6b7280;
+    font-weight: 700;
+    color: #1f2937;
     margin-bottom: 0.25rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .author-info p {
     color: #1f2937;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
