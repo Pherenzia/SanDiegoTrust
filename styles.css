@@ -551,10 +551,12 @@ body {
 }
 
 .testimonial-content h4 {
-    font-weight: 600;
+    font-weight: 700;
     color: #1f2937;
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .testimonial-content p {
