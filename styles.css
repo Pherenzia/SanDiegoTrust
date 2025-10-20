@@ -480,12 +480,14 @@ body {
 }
 
 .image-container {
-    width: 350px;
+    width: 100%;
+    max-width: none;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .image-container:hover {
@@ -494,7 +496,7 @@ body {
 
 .about-logo {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     margin-bottom: 1rem;
@@ -958,11 +960,12 @@ body {
     
     .image-container {
         width: 100%;
-        max-width: 300px;
+        max-width: none;
+        padding: 15px;
     }
     
     .about-logo {
-        max-width: 200px;
+        max-width: 100%;
     }
 }
 
@@ -1019,12 +1022,12 @@ body {
     
     .image-container {
         width: 100%;
-        max-width: 280px;
-        padding: 1.5rem;
+        max-width: none;
+        padding: 10px;
     }
     
     .about-logo {
-        max-width: 180px;
+        max-width: 100%;
     }
 }
 
