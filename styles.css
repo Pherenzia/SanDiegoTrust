@@ -174,7 +174,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -903,7 +903,7 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .hero-buttons {
@@ -988,7 +988,7 @@ body {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
