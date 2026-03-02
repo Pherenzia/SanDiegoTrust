@@ -67,7 +67,7 @@ contactForm.addEventListener('submit', async function(e) {
     }
     
     // Add Web3Forms access key
-    formData.append("access_key", "673a0aa3-a0bb-4cf4-b823-0179724e1364");
+    formData.append("access_key", "465aad92-0af0-4318-8c36-b3d043eaaf13");
     
     // Update UI
     const submitBtn = this.querySelector('button[type="submit"]');
