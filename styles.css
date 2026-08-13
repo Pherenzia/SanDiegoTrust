@@ -451,6 +451,11 @@ body {
     line-height: 1.7;
 }
 
+.about-text strong {
+    color: #111827;
+    font-weight: 700;
+}
+
 .about-text-continued {
     display: block;
     width: 100%;
